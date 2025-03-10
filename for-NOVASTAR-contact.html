@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact for Novastar </title>
+    <style>
+         h1{
+            font-size: 2rem;
+            font-weight: bold;
+            text-align: center;
+         }
+
+         header{
+            background-image: url(computer-design.jpg);
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            width: 90%;
+            position: relative;
+         }
+
+         header div{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+         }
+
+         header div h3{
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: rgb(227, 105, 11);
+         }
+
+         header div button{
+             border: 1px solid rgb(158, 12, 12);
+             background-color: red;
+             color: white;
+             cursor: pointer;
+             padding: 8px 15px;
+             border-radius: 6px;    
+         }
+
+         section{
+            width: 90%;
+            text-align: center;
+
+         }
+
+         section label{
+            display: flex;
+            gap: 3rem;
+            justify-content: center;
+            align-items: center;
+         }
+
+         section label a i{
+            font-size: 2rem;
+            cursor: pointer;
+         }
+
+         section label a #telegram{
+            color: rgb(129, 215, 249);
+            font-weight: bold;
+         }
+
+         section label a #tiktok{
+            color: black;
+            font-weight: bold;
+         }
+
+         section label a #facebook{
+            color: blue;
+            font-weight: bold;
+         }
+
+
+    </style>
+</head>
+<body>
+
+    <h1>Welcome from Novastar</h1>
+
+    <header>
+       <div>
+         <h3>Let make our dream in this school</h3>
+         <button id="btn2">Connect</button>
+       </div>
+    </header>
+
+    <section>
+        <h3>We have 3 option to connect with us </h3>
+        <p>Click below!</p>
+        <label for="">
+            <a href=""><i class="fa-brands fa-facebook" id="facebook"></i></a>
+            <a href="https://t.me/+TfUCazSXmuU4NjQ9"><i class="fa-brands fa-telegram" id="telegram"></i></a>
+            <a href=""><i class="fa-brands fa-tiktok" id="tiktok"></i></a>
+           </label>
+    </section>
+
+
+
+    <script src="https://kit.fontawesome.com/4cdae0c9dc.js" crossorigin="anonymous"></script>
+    <script>
+      const btn = document.querySelector('#btn2');
+
+
+      btn.addEventListener('click', () =>{
+         if(btn.innerHTML === 'Connect'){
+            btn.innerHTML = 'Connected';
+            btn.style.background = 'white'
+            btn.style.color = 'red'
+         }else{
+            btn.innerHTML = 'Connect';
+            btn.style.background = 'red';
+            btn.style.color = 'white';
+         }
+      });
+
+    </script>
+
+</body>
+</html>

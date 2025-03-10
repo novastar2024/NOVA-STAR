@@ -1,0 +1,429 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    height: 80px;
+    background-color: green;
+}
+
+nav img{
+    position: absolute;
+    top: 17px;
+    left: 16%;
+    width: 50px;  
+}
+
+nav ul{
+    float: right;
+    margin-right: 45px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    list-style: none;
+    margin: 0 15px;
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    position: relative;
+    text-transform: uppercase;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+nav ul li a::before{
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    bottom: -5px;
+    left: 0;
+    content: "";
+    background-color: limegreen;
+    transform: scale(0);
+    transform-origin: left;
+    transition: all 0.2s;
+}
+
+nav ul li a:hover::before{
+    transform: scale(1);
+    transform-origin: right;
+}
+
+#btn,
+#cancel{
+    float: right;
+    font-size: 30px;
+    margin: 0 40px;
+    line-height: 80px;
+    color: white;
+    display: none;
+    cursor: pointer;
+}
+
+#check{
+    display: none;
+}
+
+@media (max-width: 950px){
+    nav img{
+        top: 10px;
+        left: 6%;
+    }
+
+    #btn{
+        display: block;
+    }
+}
+
+@media (max-width: 700px){
+    ul{
+        position: absolute;
+        top: 80px;
+        background-color: lightgreen;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        z-index: 2;
+        text-align: center;
+        transition: all 0.2s;
+    }
+
+    nav ul li{
+        display: block;
+        line-height: 30px;
+        margin: 50px 0;
+    }
+
+    nav ul li a{
+        color: black;
+    }
+    
+    #check:checked ~ ul{
+        left: 0;
+    }
+
+    #check:checked ~ label #btn{
+        display: none;
+    }
+
+    #check:checked ~ label #cancel{
+        display: block;
+    }
+    
+}
+
+article{
+    position: relative;
+    background-image: url(novastar-bg-image.jpg);
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+article div{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);  
+    text-align: center;
+}
+
+article div h1{
+    font-size: 2rem;
+    color: green;
+    font-weight: bolder; 
+}
+
+article div p{
+    line-height: 20px;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+article div button{
+    color: black;
+    background-color: whitesmoke;
+    padding: 7px 16px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 5px auto;
+}
+
+
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    width: 90%;
+    gap: 2rem;
+    margin: 0 auto;
+}
+
+ h2{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+main div{
+    background-color: lightblue;
+    width: 100%;
+    padding: 20px;  
+    box-shadow: 5px 5px 35px rgb(33, 33, 33), 5px 5px 7px rgb(33, 33, 33); 
+}
+
+main div p{
+    line-height: 1.8rem;
+}
+
+main div h3{
+    font-weight: bold;
+    font-style: italic;
+}
+
+@media (min-width: 1090px)  {
+    .bf-main{
+        margin-bottom: 5rem;
+    }
+
+    main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        flex-direction: row;
+        margin-bottom: 150px;
+    }
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+ h2{
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+section div{
+    margin: 0 auto;
+    width: 100%;
+}
+
+section div img{
+    width: 100%;
+    height: 500px;
+}
+
+@media (min-width: 1080px) {
+
+    .bf-section{
+        margin-bottom: 5rem;
+    }
+    section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        gap: 3rem;
+        width: 100%;
+        margin-bottom: 150px;
+    }
+
+    section div img{
+        width: 380px;
+        height: 380px;
+    }
+
+    
+}
+
+aside{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+    gap: 2rem;
+}
+
+ h2{
+    font-size: 2rem;
+    font-style: italic;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+aside div{
+    width: 100%;
+    margin: 0 auto;
+}
+
+aside div h3{
+    text-align: center;
+}
+
+@media (min-width: 1080px) {
+
+    .bf-aside{
+        margin-bottom: 5rem;
+    }
+    aside{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        gap: 3rem;
+        margin-bottom: 150px;
+    }
+
+    aside div img{
+        width: 380px;
+        height: 380px;
+    }
+}
+
+.student{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    gap: 2rem;
+    margin: 0 auto;
+    margin-top: 3rem;
+}
+
+.student .parent{
+    background-color: lightpink;
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+    box-shadow: 5px 5px 35px rgb(33, 33, 33), 5px 5px 7px rgb(33, 33, 33);
+}
+
+.student .parent h3{
+    text-align: center;
+    margin-top: 10px;
+
+}
+
+.student .parent div label{
+    width: 100%;
+    margin: 0 auto;
+    margin-left: 30%;
+}
+
+.student .parent div label #star{
+    font-size: 1.2rem;
+    color: yellow;
+    text-align: center;
+}
+
+.student .parent div label #star-last{
+    font-size: 1.2rem;
+    color: white;
+    text-align: center;
+}
+
+@media (min-width: 1080px) {
+    .student{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-bottom: 150px;
+    }
+}
+
+h2{
+    margin-top: 2rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.contact-header{
+    width: 90%;
+    background-image: url(computer-design.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    height: 500px;
+    backdrop-filter: blur(20px);
+}
+
+.contact-header .contact{
+     position: absolute;
+     left: 50%;
+     top: 50%;
+     transform: translate(-50%, -50%);
+     text-align: center;
+}
+
+.contact-header .contact h3,a{
+    color: orange;
+    font-weight: bold;
+    margin: 1rem 0px;
+}
+
+.contact-header .contact a{
+    text-decoration: none;
+    border: 1px solid orange;
+    padding: 0.7rem;
+    color: white;
+    background-color: orange;
+    transition: all 0.2s;
+}
+
+.contact-header .contact a:hover{
+    background-color: white;
+    color: orange;
+}
+
+
+
+footer{
+    margin-top: 4rem;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    gap: 1rem;
+}
+
+footer h3,p,label{
+    text-align: center;
+    margin: 1rem auto;
+}
+
+footer h3{
+    font-style: italic;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
